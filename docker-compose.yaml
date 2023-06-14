@@ -15,9 +15,9 @@ services:
     restart: always
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepassword
-      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_DB_USER: db_admin
+      WORDPRESS_DB_PASSWORD: Test1234
+      WORDPRESS_DB_NAME: wp_database
     depends_on:
       - db
 
@@ -25,9 +25,9 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepassword
+      MYSQL_DATABASE: wp_database
+      MYSQL_USER: db_admin
+      MYSQL_PASSWORD: Test1234$
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
 
   grafana:
