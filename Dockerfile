@@ -22,10 +22,10 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
     mv wp-cli.phar /usr/local/bin/wp
 
 # Plugin WP-Forms herunterladen und installieren
-RUN /usr/local/bin/wp wp plugin install wpforms --activate --allow-root
+# RUN /usr/local/bin/wp wp plugin install wpforms --activate --allow-root
 
 # Plugin "WP Maintenance Mode" herunterladen und installieren
-RUN wp plugin install wp-maintenance-mode --activate --allow-root
+# RUN wp plugin install wp-maintenance-mode --activate --allow-root
 
 # Setze den Apache-Port auf 80
 EXPOSE 80
