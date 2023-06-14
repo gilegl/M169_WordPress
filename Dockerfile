@@ -16,6 +16,11 @@ RUN apt-get update && apt-get install -y \
 # Apache-Mod-Rewrite-Modul aktivieren
 RUN a2enmod rewrite
 
+# WP-CLI installieren
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
+    chmod +x wp-cli.phar && \
+    mv wp-cli.phar /usr/local/bin/wp
+
 # Plugin WP-Forms herunterladen und installieren
 RUN wp plugin install wpforms --activate --allow-root
 
