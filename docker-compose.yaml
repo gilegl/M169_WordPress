@@ -1,9 +1,7 @@
 version: '3'
 services:
   webserver:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/gilegl/wordpress-webpage:v1
     restart: always
     ports:
       - 80:80
